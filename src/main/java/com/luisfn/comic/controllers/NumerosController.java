@@ -28,4 +28,9 @@ public class NumerosController {
 
 		return new ResponseEntity<List<Numero>>(numerosService.ultimosNumerosAdquiridos(), HttpStatus.OK);
 	}
+	
+	@GetMapping("/numeros/caros")
+	public ResponseEntity<List<Numero>> numerosMasCaros() {
+		return new ResponseEntity<List<Numero>>(numerosService.numerosMasCaros(), HttpStatus.OK);
+	}
 }
