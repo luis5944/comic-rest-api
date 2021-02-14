@@ -23,4 +23,8 @@ public class NumerosService {
 
 		return numerosRepository.ultimosNumerosAdquiridos();
 	}
+	
+	public List<Numero> numerosMasCaros() {
+		return numerosRepository.numerosMasCaros();
+	}
 }
