@@ -1,8 +1,6 @@
 package com.luisfn.comic.services;
 
-import java.util.Calendar;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,24 +20,23 @@ public class NumerosService {
 	}
 
 	public List<Numero> ultimosNumerosAdquiridos() {
-		List<Numero> numeros = numerosRepository.ultimosNumerosAdquiridos().stream().map(n -> {
-			Calendar c = Calendar.getInstance();
-			c.setTime(n.getFechaAdquisicion());
-			c.add(Calendar.DATE, 1);
-			n.setFechaAdquisicion(c.getTime());
-			return n;
-		}).collect(Collectors.toList());
-		return numeros;
+		/*
+		 * List<Numero> numeros =
+		 * numerosRepository.ultimosNumerosAdquiridos().stream().map(n -> { Calendar c =
+		 * Calendar.getInstance(); c.setTime(n.getFechaAdquisicion());
+		 * c.add(Calendar.DATE, 1); n.setFechaAdquisicion(c.getTime()); return n;
+		 * }).collect(Collectors.toList());
+		 */
+		return numerosRepository.ultimosNumerosAdquiridos();
 	}
 
 	public List<Numero> numerosMasCaros() {
-		List<Numero> numeros = numerosRepository.numerosMasCaros().stream().map(n -> {
-			Calendar c = Calendar.getInstance();
-			c.setTime(n.getFechaAdquisicion());
-			c.add(Calendar.DATE, 1);
-			n.setFechaAdquisicion(c.getTime());
-			return n;
-		}).collect(Collectors.toList());
-		return numeros;
+		/*
+		 * List<Numero> numeros = numerosRepository.numerosMasCaros().stream().map(n ->
+		 * { Calendar c = Calendar.getInstance(); c.setTime(n.getFechaAdquisicion());
+		 * c.add(Calendar.DATE, 1); n.setFechaAdquisicion(c.getTime()); return n;
+		 * }).collect(Collectors.toList());
+		 */
+		return numerosRepository.numerosMasCaros();
 	}
 }
