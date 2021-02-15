@@ -27,6 +27,7 @@ public class NumerosService {
 		 * c.add(Calendar.DATE, 1); n.setFechaAdquisicion(c.getTime()); return n;
 		 * }).collect(Collectors.toList());
 		 */
+
 		return numerosRepository.ultimosNumerosAdquiridos();
 	}
 
@@ -37,6 +38,7 @@ public class NumerosService {
 		 * c.add(Calendar.DATE, 1); n.setFechaAdquisicion(c.getTime()); return n;
 		 * }).collect(Collectors.toList());
 		 */
+
 		return numerosRepository.numerosMasCaros();
 	}
 }
