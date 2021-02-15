@@ -22,24 +22,24 @@ public class NumerosService {
 	}
 
 	public List<Numero> ultimosNumerosAdquiridos() {
-		List<Numero> numeros = numerosRepository.ultimosNumerosAdquiridos().stream().map(n -> {
+		/*List<Numero> numeros = numerosRepository.ultimosNumerosAdquiridos().stream().map(n -> {
 			Calendar c = Calendar.getInstance();
 			c.setTime(n.getFechaAdquisicion());
 			c.add(Calendar.DATE, 1);
 			n.setFechaAdquisicion(c.getTime());
 			return n;
-		}).collect(Collectors.toList());
+		}).collect(Collectors.toList());*/
 		return numerosRepository.ultimosNumerosAdquiridos();
 	}
 
 	public List<Numero> numerosMasCaros() {
-		List<Numero> numeros = numerosRepository.numerosMasCaros().stream().map(n -> {
+		/*List<Numero> numeros = numerosRepository.numerosMasCaros().stream().map(n -> {
 			Calendar c = Calendar.getInstance();
 			c.setTime(n.getFechaAdquisicion());
 			c.add(Calendar.DATE, 1);
 			n.setFechaAdquisicion(c.getTime());
 			return n;
-		}).collect(Collectors.toList());
+		}).collect(Collectors.toList());*/
 		return numerosRepository.numerosMasCaros();
 	}
 }
