@@ -29,7 +29,7 @@ public class NumerosService {
 			n.setFechaAdquisicion(c.getTime());
 			return n;
 		}).collect(Collectors.toList());
-		return ultimosNumerosAdquiridos();
+		return numerosRepository.ultimosNumerosAdquiridos();
 	}
 
 	public List<Numero> numerosMasCaros() {
@@ -40,6 +40,6 @@ public class NumerosService {
 			n.setFechaAdquisicion(c.getTime());
 			return n;
 		}).collect(Collectors.toList());
-		return numerosMasCaros();
+		return numerosRepository.numerosMasCaros();
 	}
 }
